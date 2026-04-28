@@ -1,0 +1,852 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>比叡山未来会議2026 ご案内</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;600;700&family=Noto+Sans+JP:wght@300;400;500;700&display=swap');
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'Noto Sans JP', sans-serif;
+    color: #333;
+    line-height: 1.9;
+    background: #fff;
+  }
+
+  /* Hero - HRI style: dark/black base */
+  .hero {
+    background: linear-gradient(180deg, #0a0a0a 0%, #1a1a1a 50%, #222 100%);
+    color: #fff;
+    text-align: center;
+    padding: 100px 24px 80px;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: radial-gradient(ellipse at 50% 30%, rgba(255,255,255,0.04) 0%, transparent 70%);
+  }
+  .hero-inner { position: relative; z-index: 1; max-width: 700px; margin: 0 auto; }
+  .hero-year {
+    font-family: 'Noto Serif JP', serif;
+    font-size: 13px;
+    letter-spacing: 6px;
+    text-transform: uppercase;
+    opacity: 0.5;
+    margin-bottom: 20px;
+  }
+  .hero h1 {
+    font-family: 'Noto Serif JP', serif;
+    font-size: 38px;
+    font-weight: 700;
+    letter-spacing: 6px;
+    margin-bottom: 24px;
+  }
+  .hero-subtitle {
+    font-family: 'Noto Serif JP', serif;
+    font-size: 17px;
+    font-weight: 400;
+    letter-spacing: 4px;
+    opacity: 0.8;
+    margin-bottom: 48px;
+  }
+  .hero-date {
+    font-size: 14px;
+    font-weight: 300;
+    letter-spacing: 2px;
+    opacity: 0.6;
+  }
+  .hero-divider {
+    width: 40px;
+    height: 1px;
+    background: rgba(255,255,255,0.3);
+    margin: 32px auto;
+  }
+
+  /* Container */
+  .container {
+    max-width: 780px;
+    margin: 0 auto;
+    padding: 0 24px;
+  }
+
+  /* Intro */
+  .intro {
+    padding: 64px 0;
+    border-bottom: 1px solid #e0e0e0;
+  }
+  .intro p {
+    font-size: 15px;
+    line-height: 2.2;
+    text-align: justify;
+    margin-bottom: 20px;
+    color: #444;
+  }
+  .intro .org-info {
+    text-align: center;
+    margin-top: 40px;
+    font-size: 14px;
+    line-height: 2;
+    color: #666;
+  }
+
+  /* Section */
+  section {
+    padding: 48px 0;
+    border-bottom: 1px solid #e0e0e0;
+  }
+  section:last-of-type { border-bottom: none; }
+
+  h2 {
+    font-family: 'Noto Serif JP', serif;
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 32px;
+    padding-bottom: 12px;
+    border-bottom: 2px solid #111;
+    color: #111;
+  }
+  h3 {
+    font-family: 'Noto Serif JP', serif;
+    font-size: 17px;
+    font-weight: 600;
+    margin: 28px 0 12px;
+    color: #222;
+  }
+
+  /* Info table */
+  .info-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 16px 0;
+  }
+  .info-table th {
+    text-align: left;
+    vertical-align: top;
+    padding: 12px 16px 12px 0;
+    font-weight: 500;
+    white-space: nowrap;
+    width: 140px;
+    color: #111;
+    border-bottom: 1px solid #e0e0e0;
+    font-size: 14px;
+  }
+  .info-table td {
+    padding: 12px 0;
+    border-bottom: 1px solid #e0e0e0;
+    font-size: 14px;
+    line-height: 1.8;
+  }
+
+  /* Program */
+  .program-block {
+    background: #fafafa;
+    border-radius: 4px;
+    padding: 32px;
+    margin: 20px 0;
+    border: 1px solid #e8e8e8;
+  }
+  .program-item {
+    display: flex;
+    gap: 20px;
+    padding: 14px 0;
+    border-bottom: 1px solid #e8e8e8;
+    align-items: flex-start;
+  }
+  .program-item:last-child { border-bottom: none; }
+  .program-time {
+    font-size: 13px;
+    font-weight: 500;
+    color: #333;
+    white-space: nowrap;
+    min-width: 110px;
+    padding-top: 2px;
+  }
+  .program-content {
+    flex: 1;
+    font-size: 14px;
+  }
+  .program-title {
+    font-weight: 500;
+    margin-bottom: 4px;
+    color: #222;
+  }
+  .program-speaker {
+    font-size: 13px;
+    color: #666;
+    line-height: 1.7;
+  }
+  .program-note {
+    font-size: 13px;
+    color: #555;
+    margin-top: 6px;
+  }
+  .session-theme {
+    font-family: 'Noto Serif JP', serif;
+    font-size: 15px;
+    font-weight: 600;
+    color: #111;
+    margin-bottom: 8px;
+  }
+
+  /* Speaker name in program */
+  .speaker-name {
+    font-weight: 500;
+    color: #333;
+  }
+
+  /* Notes */
+  .note {
+    font-size: 13px;
+    color: #666;
+    line-height: 1.8;
+    margin: 8px 0;
+  }
+  .note-list {
+    list-style: none;
+    padding: 0;
+  }
+  .note-list li {
+    font-size: 13px;
+    color: #555;
+    line-height: 1.9;
+    padding-left: 16px;
+    position: relative;
+    margin-bottom: 4px;
+  }
+  .note-list li::before {
+    content: '\00B7';
+    position: absolute;
+    left: 0;
+    font-weight: 700;
+  }
+
+  p { font-size: 14px; line-height: 2; margin-bottom: 12px; }
+
+  /* Profiles */
+  .profile-section {
+    padding: 48px 0;
+    border-bottom: 1px solid #e0e0e0;
+  }
+  .profile-card {
+    padding: 24px 0;
+    border-bottom: 1px solid #e8e8e8;
+  }
+  .profile-card:last-child { border-bottom: none; }
+  .profile-name {
+    font-family: 'Noto Serif JP', serif;
+    font-size: 16px;
+    font-weight: 600;
+    color: #111;
+    margin-bottom: 2px;
+  }
+  .profile-title {
+    font-size: 13px;
+    color: #666;
+    margin-bottom: 10px;
+  }
+  .profile-bio {
+    font-size: 13px;
+    color: #555;
+    line-height: 1.9;
+    text-align: justify;
+  }
+
+  /* Reference */
+  .reference-box {
+    background: #f5f5f5;
+    border: 1px solid #e0e0e0;
+    border-radius: 4px;
+    padding: 20px 24px;
+    margin: 24px 0;
+  }
+  .reference-box p {
+    font-size: 13px;
+    color: #555;
+    margin-bottom: 4px;
+  }
+  .reference-box a {
+    color: #333;
+    text-decoration: underline;
+    font-size: 13px;
+  }
+
+  /* Footer */
+  .footer {
+    background: #0a0a0a;
+    color: rgba(255,255,255,0.6);
+    text-align: center;
+    padding: 40px 24px;
+    font-size: 13px;
+    line-height: 2;
+  }
+  .footer strong { color: #fff; }
+
+  /* PDF download button */
+  .pdf-download {
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    z-index: 100;
+  }
+  .pdf-download button {
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+    color: #fff;
+    background: #111;
+    border: none;
+    padding: 12px 20px;
+    cursor: pointer;
+    letter-spacing: 1px;
+    transition: background 0.2s;
+  }
+  .pdf-download button:hover {
+    background: #333;
+  }
+
+  /* Print styles */
+  @media print {
+    * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+
+    /* Page margins: generous left/right for formal document feel */
+    @page { margin: 20mm 22mm 18mm 22mm; }
+    @page :first { margin-top: 12mm; }
+
+    body {
+      background: #fff;
+      font-size: 10.5pt;
+      line-height: 1.75;
+      color: #222;
+    }
+
+    /* --- Hero: elegant print-friendly header --- */
+    .hero {
+      background: #fff !important;
+      color: #111 !important;
+      padding: 28px 0 24px;
+      border-bottom: 2px solid #111;
+    }
+    .hero::before { display: none; }
+    .hero-inner { max-width: 100%; }
+    .hero-year {
+      color: #555 !important;
+      opacity: 1;
+      font-size: 8.5pt;
+      letter-spacing: 4px;
+      margin-bottom: 14px;
+    }
+    .hero h1 {
+      font-size: 22pt;
+      color: #111;
+      letter-spacing: 5px;
+      margin-bottom: 16px;
+    }
+    .hero-subtitle {
+      color: #333 !important;
+      opacity: 1;
+      font-size: 12pt;
+      letter-spacing: 3px;
+      margin-bottom: 20px;
+    }
+    .hero-divider {
+      background: #888;
+      width: 32px;
+      margin: 16px auto;
+    }
+    .hero-date {
+      color: #444 !important;
+      opacity: 1;
+      font-size: 9pt;
+      letter-spacing: 1px;
+    }
+
+    /* --- Layout: proper content width with breathing room --- */
+    .container {
+      max-width: 100%;
+      padding: 0;
+    }
+
+    /* --- Intro section --- */
+    .intro {
+      padding: 20px 0 16px;
+      border-bottom: 1px solid #ccc;
+    }
+    .intro p {
+      font-size: 10pt;
+      line-height: 1.85;
+      margin-bottom: 8px;
+      text-align: justify;
+      text-justify: inter-ideograph;
+    }
+    .intro .org-info {
+      margin-top: 20px;
+      font-size: 9.5pt;
+      line-height: 1.8;
+    }
+
+    /* --- Section spacing --- */
+    section {
+      padding: 18px 0 14px;
+      border-bottom: 1px solid #d0d0d0;
+    }
+
+    /* --- Headings: clear hierarchy --- */
+    h2 {
+      font-size: 13pt;
+      font-weight: 700;
+      margin-bottom: 14px;
+      padding-bottom: 5px;
+      border-bottom: 1.5pt solid #111;
+      page-break-after: avoid;
+      letter-spacing: 1px;
+    }
+    h3 {
+      font-size: 10.5pt;
+      font-weight: 600;
+      margin: 14px 0 6px;
+      page-break-after: avoid;
+    }
+
+    /* --- Body text --- */
+    p {
+      font-size: 9.5pt;
+      line-height: 1.75;
+      margin-bottom: 6px;
+    }
+
+    /* --- Info tables --- */
+    .info-table th {
+      font-size: 9.5pt;
+      padding: 7px 14px 7px 0;
+      width: 80pt;
+      vertical-align: top;
+      font-weight: 600;
+      color: #111;
+      border-bottom: 1px solid #d8d8d8;
+    }
+    .info-table td {
+      font-size: 9.5pt;
+      padding: 7px 0;
+      line-height: 1.7;
+      border-bottom: 1px solid #d8d8d8;
+    }
+
+    /* --- Program block --- */
+    .program-block {
+      background: #fff;
+      border: 1pt solid #bbb;
+      border-radius: 0;
+      box-shadow: none;
+      padding: 12px 16px;
+      margin: 10px 0;
+    }
+    .program-item {
+      padding: 6px 0;
+      border-bottom: 0.5pt solid #ddd;
+    }
+    .program-item:last-child { border-bottom: none; }
+    .program-time {
+      font-size: 8.5pt;
+      min-width: 80px;
+      font-weight: 500;
+      color: #222;
+      padding-top: 1px;
+    }
+    .program-content { font-size: 9.5pt; }
+    .program-title { font-size: 9.5pt; font-weight: 600; }
+    .program-speaker { font-size: 8.5pt; line-height: 1.6; }
+    .program-note { font-size: 8.5pt; color: #444; }
+    .session-theme { font-size: 10pt; font-weight: 700; }
+
+    /* --- Profiles: clean cards --- */
+    .profile-section { padding: 18px 0 10px; }
+    .profile-card {
+      padding: 12px 0 10px;
+      border-bottom: 0.5pt solid #d0d0d0;
+      page-break-inside: avoid;
+    }
+    .profile-card:last-child { border-bottom: none; }
+    .profile-name {
+      font-size: 10.5pt;
+      font-weight: 700;
+      margin-bottom: 1px;
+    }
+    .profile-title {
+      font-size: 8.5pt;
+      color: #555;
+      margin-bottom: 6px;
+    }
+    .profile-bio {
+      font-size: 8.5pt;
+      line-height: 1.65;
+      text-align: justify;
+      text-justify: inter-ideograph;
+    }
+
+    /* --- Reference box --- */
+    .reference-box {
+      background: #f7f7f7;
+      border: 0.5pt solid #ccc;
+      border-radius: 0;
+      padding: 10px 14px;
+      margin: 12px 0;
+    }
+    .reference-box p { font-size: 8.5pt; line-height: 1.65; }
+    .reference-box a { color: #111; font-size: 8.5pt; }
+    .reference-box a::after {
+      content: ' (' attr(href) ')';
+      font-size: 7.5pt;
+      color: #777;
+    }
+
+    /* --- Notes --- */
+    .note { font-size: 8.5pt; color: #555; }
+    .note-list li { font-size: 8.5pt; line-height: 1.7; }
+
+    /* --- Footer: formal, minimal --- */
+    .footer {
+      background: #fff !important;
+      color: #333 !important;
+      border-top: 1.5pt solid #111;
+      padding: 14px 0 0;
+      font-size: 8.5pt;
+      line-height: 1.8;
+      page-break-inside: avoid;
+    }
+    .footer strong { color: #111 !important; }
+
+    /* --- Hide non-print elements --- */
+    .pdf-download { display: none !important; }
+
+    /* --- Orphan/Widow control --- */
+    p, .profile-bio, .program-speaker {
+      orphans: 3;
+      widows: 3;
+    }
+
+    /* --- Prevent awkward page breaks --- */
+    .program-block { page-break-inside: avoid; }
+    .info-table { page-break-inside: avoid; }
+    .reference-box { page-break-inside: avoid; }
+    h2, h3 { page-break-after: avoid; }
+    .intro { page-break-inside: avoid; }
+  }
+
+  /* Responsive */
+  @media (max-width: 600px) {
+    .hero { padding: 64px 20px 56px; }
+    .hero h1 { font-size: 26px; letter-spacing: 2px; }
+    .hero-subtitle { font-size: 14px; letter-spacing: 2px; }
+    .program-item { flex-direction: column; gap: 4px; }
+    .program-time { min-width: auto; }
+    .program-block { padding: 20px; }
+    .info-table th { width: 100px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- Hero -->
+<div class="hero">
+  <div class="hero-inner">
+    <div class="hero-year">The 3rd Hiei Future Conference</div>
+    <h1>比叡山未来会議 2026</h1>
+    <div class="hero-subtitle">― いのちめぐる融和の未来へ ―</div>
+    <div class="hero-divider"></div>
+    <div class="hero-date">2026年6月15日（月）13:00 - 17:50 / 比叡山延暦寺会館</div>
+  </div>
+</div>
+
+<!-- Intro -->
+<div class="container">
+  <div class="intro">
+    <p>
+      AIが日常に溶け込み、身体と技術、自然と人工の境界がゆらぎはじめた今、私たちは「いのち」とは何か、「生きる」とは何かを、改めて問い直す時を迎えています。
+    </p>
+    <p>
+      2023年より始まった「比叡山未来会議」は、オムロン創業者・立石一真氏が1970年に発表した未来予測理論「SINIC（サイニック）理論」を羅針盤に、分野を超えた知の交差から未来社会の解像度を高めることを目的とした招待制の会議です。SINIC理論は2025年を「自律社会の元年」と位置付け、2033年以降を「自然社会」への移行期間と定義しています。第1回（2023年）では約200名が参加し、霊長類学者・山極壽一氏の基調講演のもと自律社会への問いを立てました。第2回（2025年1月）には企業・自治体・アカデミアから約150名が集結し、その半数が初参加者となる広がりを見せる中、建築史・都市史研究者・松田法子氏による「自然社会と生環境構築の未来」をテーマに、持続可能な生環境の構築と地球との新たな関係を模索する議論が展開されました。
+    </p>
+    <p>
+      第3回となる今回は、「いのちめぐる融和の未来」をテーマに掲げます。SINIC理論が描く自律社会から自然社会への移行の中で、AI技術の急速な進展がもたらす「AI界」の登場、身体をもって生きることの意味、そして千年の時を超えて伝えられてきた知恵と最先端の科学が交差する地点から、未来社会の姿を探ります。
+    </p>
+    <p>
+      澄んだ空気の漂う比叡山、千二百年の祈りが息づくこの場所からこそ見える未来の眺望を、みなさまと共に分かち合いたいと思います。ぜひ、第3回比叡山未来会議にお越しください。みなさまとお会いできることを楽しみにお待ちしています。
+    </p>
+    <div class="org-info">
+      主催：株式会社ヒューマンルネッサンス研究所<br>
+      共催：NPO法人ミラツク、オムロン株式会社
+    </div>
+  </div>
+</div>
+
+<!-- 開催概要 -->
+<div class="container">
+  <section>
+    <h2>開催概要</h2>
+    <table class="info-table">
+      <tr>
+        <th>日時</th>
+        <td>2026年6月15日（月）13:00 - 17:50<br>
+          <span class="note">※終了後、比叡山延暦寺会館にて懇親・交流会を予定しています。</span></td>
+      </tr>
+      <tr>
+        <th>会場</th>
+        <td>比叡山延暦寺会館 ホール比叡<br>
+          〒520-0116 滋賀県大津市坂本本町4220</td>
+      </tr>
+      <tr>
+        <th>参加</th>
+        <td>招待制 / 約150名<br>
+          <span class="note">※現地参加のみとなります</span></td>
+      </tr>
+    </table>
+  </section>
+
+  <!-- 交通 -->
+  <section>
+    <h2>交通について</h2>
+    <p>行きは京都駅から会場（比叡山）まで、帰りは会場（比叡山）から京都駅まで、大型バスでの送迎を用意しています。京都駅での集合場所などの詳細は、ご参加申込いただいた後の詳細案内にてお送りいたします。送迎バスを利用せず、ご自身で移動いただくことも可能です。</p>
+
+    <h3>発着時間予定</h3>
+    <ul class="note-list">
+      <li>往路：京都駅近辺 11:30発 / 会場近辺 12:30着</li>
+      <li>復路（2便予定）：会場近辺 18:00発 / 20:00発</li>
+    </ul>
+  </section>
+
+  <!-- 参加について -->
+  <section>
+    <h2>参加について</h2>
+    <table class="info-table">
+      <tr>
+        <th>参加登録</th>
+        <td>参加をご希望の際は、以下URLより参加登録をお願いいたします（参加登録は必須となります）。<br>
+          <span class="note">※参加登録URLは追ってご案内いたします。</span></td>
+      </tr>
+      <tr>
+        <th>参加費</th>
+        <td>本会議参加費・懇親会費等の詳細は追ってご案内いたします。</td>
+      </tr>
+      <tr>
+        <th>宿泊</th>
+        <td>宿泊を希望される方は申込フォームにてお知らせください。<br>
+          <span class="note">※部屋数に限りがあるためご希望に添えない場合があります。</span></td>
+      </tr>
+    </table>
+  </section>
+
+  <!-- プログラム -->
+  <section>
+    <h2>プログラム概要</h2>
+
+    <div class="program-block">
+
+      <div class="program-item">
+        <div class="program-time">13:00 - 13:15</div>
+        <div class="program-content">
+          <div class="program-title">開会 / オープニングパフォーマンス</div>
+          <div class="program-speaker">能楽・古典芸能の第一人者による特別パフォーマンスを予定しています。千年を超える伝統芸能の身体知から、会議の問いの扉を開きます。</div>
+        </div>
+      </div>
+
+      <div class="program-item">
+        <div class="program-time">13:15 - 13:20</div>
+        <div class="program-content">
+          <div class="program-title">開会挨拶</div>
+        </div>
+      </div>
+
+      <div class="program-item">
+        <div class="program-time">13:20 - 13:40</div>
+        <div class="program-content">
+          <div class="program-title">セッション：活動報告（比叡山未来会議3回目の位置付け）</div>
+          <div class="program-speaker">第1回・第2回の会議から生まれたコンソーシアム、らせん、実践コミュニティ等の活動を振り返ります。前回の会議では、立石郁雄（ヒューマンルネッサンス研究所 代表取締役社長）が「未来は私たち自身が創り上げるもの。各々が得意分野を生かし、情熱をもって具体的に実践することが重要」と述べました。その実践がどのように展開されてきたか、3回目を迎える本会議の位置づけと共に共有します。</div>
+        </div>
+      </div>
+
+      <div class="program-item">
+        <div class="program-time">13:40 - 14:00</div>
+        <div class="program-content">
+          <div class="program-title">セッション：自律社会元年を振り返る</div>
+          <div class="program-speaker">SINIC理論が「自律社会の元年」と位置付けた2025年。AIやロボットが人間の仕事を担う時代が現実のものとなり、私たちはどのように生き、どんな社会を築いていくのかが問われています。自律社会元年の実相を振り返り、2033年以降の「自然社会」への移行に向けた現状と課題を共有します。</div>
+        </div>
+      </div>
+
+      <div class="program-item">
+        <div class="program-time">14:00 - 14:45</div>
+        <div class="program-content">
+          <div class="session-theme">基調講演</div>
+          <div class="program-speaker">伝統芸能・身体知の領域から、千年の時を超えて受け継がれてきた知恵の中にある「未知」、そして「いのち」の根源に迫る基調講演を予定しています。最先端の技術が急速に進む現代において、古来の身体的実践が照らし出す人間存在の本質について語っていただきます。</div>
+          <div class="program-note">※登壇者は調整中です。確定次第お知らせいたします。</div>
+        </div>
+      </div>
+
+      <div class="program-item">
+        <div class="program-time">14:45 - 15:00</div>
+        <div class="program-content">
+          <div class="program-title">休憩</div>
+        </div>
+      </div>
+
+      <div class="program-item">
+        <div class="program-time">15:00 - 15:50</div>
+        <div class="program-content">
+          <div class="session-theme">基調セッション「いのちめぐる未来社会とAI界の登場」</div>
+          <div class="program-speaker">
+            科学・技術・身体・芸術など多様な領域の最前線に立つゲストを迎え、AI時代における生きる歓びと身体感覚、精神と技術の融和について多角的に議論します。
+          </div>
+          <div class="program-note">
+            登壇者：<span class="speaker-name">為末 大</span> 氏（東京大学先端科学技術研究センター 教授）ほか調整中
+          </div>
+        </div>
+      </div>
+
+      <div class="program-item">
+        <div class="program-time">15:50 - 16:10</div>
+        <div class="program-content">
+          <div class="program-title">ワークショップ：グループディスカッション</div>
+          <div class="program-speaker">基調講演・基調セッションを受けた参加者間の議論</div>
+        </div>
+      </div>
+
+      <div class="program-item">
+        <div class="program-time">16:10 - 16:25</div>
+        <div class="program-content">
+          <div class="program-title">休憩</div>
+        </div>
+      </div>
+
+      <div class="program-item">
+        <div class="program-time">16:25 - 17:10</div>
+        <div class="program-content">
+          <div class="session-theme">パネルディスカッション「SINICの更新と自然社会後の未来社会の到来」</div>
+          <div class="program-speaker">
+            SINIC理論の進化と、自律社会の先にある自然社会、さらにその先の未来社会像について、理論と実践の両面から議論を深めます。
+          </div>
+          <div class="program-note">
+            登壇者：<span class="speaker-name">中間 真一</span>（株式会社ヒューマンルネッサンス研究所 エグゼクティブフェロー）、<span class="speaker-name">大室 悦賀</span> 氏（長野県立大学 教授）、<span class="speaker-name">西村 勇哉</span>（NPO法人ミラツク 代表理事）、<span class="speaker-name">福本 理恵</span> 氏（株式会社SPACE 代表取締役CEO）
+          </div>
+        </div>
+      </div>
+
+      <div class="program-item">
+        <div class="program-time">17:10 - 17:30</div>
+        <div class="program-content">
+          <div class="program-title">ワークショップ：グループディスカッション</div>
+          <div class="program-speaker">パネルディスカッションを受けた参加者間の議論</div>
+        </div>
+      </div>
+
+      <div class="program-item">
+        <div class="program-time">17:30 - 17:50</div>
+        <div class="program-content">
+          <div class="program-title">閉会：クロージング / 自然社会に向けて</div>
+          <div class="program-speaker">総括と今後への展望</div>
+        </div>
+      </div>
+
+    </div>
+
+    <p class="note">※プログラムの内容・時間は変更になる場合があります。<br>
+    ※一部の登壇者は現在調整中です。確定次第お知らせいたします。</p>
+
+    <h3>懇親・交流会</h3>
+    <p>今回お招きした皆様と共に、お互いに知り合い、今後に向けたネットワークを築くための懇親・交流会を開催します。参加を希望の方は、参加登録フォームより懇親・交流会の参加にチェックを入れてください。</p>
+    <p class="note">日時：6/15 18:00 - 20:00頃（比叡山延暦寺会館にて）</p>
+
+    <h3>オプショナルツアー</h3>
+    <p>翌6/16（火）に、SINIC理論の生みの親であるオムロン創業者の立石一真の"人生とひととなり"、"ベンチャースピリット"を体感いただける「立石一真 創業記念館」（京都市右京区鳴滝）を訪問し、SINIC理論についての理解をさらに深めていただくオプショナルツアーを特別開催いたします。</p>
+    <p class="note">詳細は追ってご案内いたします。参加費無料。</p>
+  </section>
+
+  <!-- ゲストプロフィール -->
+  <section class="profile-section">
+    <h2>ゲストプロフィール（確定登壇者 / 他調整中）</h2>
+
+    <div class="profile-card">
+      <div class="profile-name">為末 大 氏</div>
+      <div class="profile-title">東京大学先端科学技術研究センター（RCAST）社会包摂共創機構 教授 / Deportare Partners 代表</div>
+      <div class="profile-bio">
+        世界陸上で2度の銅メダルを獲得し、オリンピック3大会連続出場を果たした日本を代表するアスリート。「走る哲学者」と称され、身体と思考、限界と選択、個人と社会といった根源的な問いに対して独自の視座から発信を続ける。2026年4月より東京大学先端科学技術研究センター（RCAST）社会包摂共創機構の教授に就任し、「動き・意味・あそび」をテーマに、AI時代における人間の身体性と包摂的社会の探究に取り組んでいる。著書に『Winning Alone 自己理解のパフォーマンス論』『熟達論』など。
+      </div>
+    </div>
+
+    <div class="profile-card">
+      <div class="profile-name">中間 真一</div>
+      <div class="profile-title">株式会社ヒューマンルネッサンス研究所 エグゼクティブフェロー</div>
+      <div class="profile-bio">
+        慶応義塾大学工学部卒業、埼玉大学大学院（経済学）修了。株式会社ヒューマンルネッサンス研究所の創設メンバーとして参画し、オムロン創業者らによる未来予測理論「SINIC理論」を活かした未来社会研究に従事して現在に至る。「自動」「自律」「自然」をテーマとした人とテクノロジーのインタラクション、「遊」「学」「働」の未来展望など、創設以来Do tankを目指し、フィールドで未来予兆を探索している。著書に『SINIC理論 ～過去半世紀を言い当て、来たる半世紀を予測するオムロンの未来学～』（日本能率協会マネジメントセンター）、共著書に『スウェーデン―自律社会を生きる人びと―』（早稲田大学出版部）、『北欧学のフロンティア』（ミネルヴァ書房）など。
+      </div>
+    </div>
+
+    <div class="profile-card">
+      <div class="profile-name">大室 悦賀 氏</div>
+      <div class="profile-title">長野県立大学 グローバルマネジメント学部 教授 / 大学院ソーシャル・イノベーション研究科 研究科長</div>
+      <div class="profile-bio">
+        ソーシャル・イノベーション研究の第一人者。法政大学大学院社会科学研究科修了。長野県立大学大学院ソーシャル・イノベーション研究科の研究科長として、起業家育成と社会課題解決のビジネスモデル研究をリード。京都市ソーシャルイノベーション研究所所長も務め、地域と社会の変革に理論と実践の両面から取り組む。ソーシャル・ビジネス論、起業家論を専門とし、持続可能な社会の実現に向けた研究・教育活動を展開している。
+      </div>
+    </div>
+
+    <div class="profile-card">
+      <div class="profile-name">西村 勇哉</div>
+      <div class="profile-title">NPO法人ミラツク 代表理事 / 株式会社エッセンス 代表取締役</div>
+      <div class="profile-bio">
+        1981年大阪府池田市生まれ。大阪大学大学院にて人間科学の修士を取得。人材開発ベンチャー企業、公益財団法人日本生産性本部を経て、2011年にNPO法人ミラツクを設立。セクター、職種、領域を超えたイノベーションプラットフォームの構築と、大手企業の新領域事業開発支援・研究開発プロジェクト立ち上げの支援、未来構想の設計、未来潮流の探索などに取り組む。2021年に株式会社エッセンスを設立。自然科学、社会科学、人文学を領域横断的に扱う先端研究者メディアesse-senseを運営。大阪大学社会ソリューションイニシアティブ招聘教授、大阪大学人間科学研究科後期博士課程（人類学）在籍。滋賀県大津市在住。
+      </div>
+    </div>
+
+    <div class="profile-card">
+      <div class="profile-name">福本 理恵 氏</div>
+      <div class="profile-title">株式会社SPACE 代表取締役CEO</div>
+      <div class="profile-bio">
+        東京大学先端科学技術研究センター交流研究員を経て、個別最適な学びの実現を目指す株式会社SPACEを創業。東京大学・日本財団による「異才発掘プロジェクトROCKET」のプロジェクトリーダーとして、多様な認知特性を持つ子どもたちの才能を引き出す教育プログラムを主導した経験を持つ。認知特性の可視化と探究的学習設計を専門とし、一人ひとりの適性を活かした教育アセスメントツールの開発・提供に取り組んでいる。
+      </div>
+    </div>
+
+    <p class="note" style="margin-top: 24px;">※上記のほか、基調講演・基調セッションの登壇者を現在調整中です。確定次第、順次ご案内いたします。</p>
+
+  </section>
+
+  <!-- 参考情報 -->
+  <section>
+    <h2>参考情報</h2>
+
+    <div class="reference-box">
+      <p>前回（第2回）の比叡山未来会議では、比叡山延暦寺の今出川行戒氏による「一隅を照らす」という最澄の教えの紹介から始まり、東京大学の大黒達也准教授によるAI音楽生成のパフォーマンス、松田法子氏による「生環境構築」の基調講演、そして地域再生・建築・医療・観光など多分野にわたるパネル対談とワークショップが行われました。詳しい内容はオムロンのウェブサイトでご覧いただけます。</p>
+      <a href="https://www.omron.com/jp/ja/edge-link/news/736.html" target="_blank" rel="noopener">比叡山未来会議 第2回 開催レポート（OMRON EDGE&amp;LINK）</a>
+    </div>
+  </section>
+
+  <!-- その他 -->
+  <section>
+    <h2>その他</h2>
+
+    <h3>比叡山入山の拝観料について</h3>
+    <p>比叡山入山の拝観料については、主催者側で負担いたします。巡拝所（拝観料支払場所）をご通過の際に「延暦寺会館での比叡山未来会議に参加」とお伝えの上、そのままお通りください。</p>
+
+    <h3>飲食について</h3>
+    <p>延暦寺会館では飲食の持ち込みが禁止されています。当日はみなさまにペットボトルのお茶をご用意予定です。ご昼食などは参加前にお済ませいただくようお願い申し上げます。</p>
+  </section>
+</div>
+
+<!-- Footer -->
+<div class="footer">
+  <strong>比叡山未来会議 2026</strong><br>
+  主催：株式会社ヒューマンルネッサンス研究所<br>
+  共催：NPO法人ミラツク、オムロン株式会社<br><br>
+  お問い合わせ：株式会社ヒューマンルネッサンス研究所<br>
+</div>
+
+<!-- PDF Download Button -->
+<div class="pdf-download">
+  <button onclick="window.print()">PDF保存 / 印刷</button>
+</div>
+
+</body>
+</html>
